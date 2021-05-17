@@ -1,0 +1,13 @@
+spring:
+  cache:
+    ehcache:
+      config: classpath:ehcache.xml
+    multi:
+      useL2: true
+      ehcache:
+        expireAfterWrite: 5000
+        maxEntry: 1000
+      redis:
+        defaultExpiration: 0
+  redis:
+    connect-timeout: 10000ms
